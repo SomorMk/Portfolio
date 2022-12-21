@@ -1,0 +1,52 @@
+@import '../mixins/mixins';
+@import '../variables/variable';
+
+/*=========================================================
+                Side menu Banner css Start
+=========================================================*/
+#side_menu {
+    position: fixed;
+    top: 45px;
+    right: 100px;
+    z-index: 9;
+
+    .white_level{
+        display: none !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: #fff;
+        display: block;
+        z-index: -1;
+    }
+
+    .banner_nav {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            .active {
+                a {
+                    border-bottom: 1px solid red;
+                }
+            }
+
+            li {
+                text-align: center;
+                text-align: right;
+                margin: 0 20px;
+
+                a {
+                    @include fs($c1, 15px, 700, $f1);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+/*=========================================================
+                Side menu Banner css end
+=========================================================*/

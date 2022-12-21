@@ -1,0 +1,102 @@
+@import '../mixins/mixins';
+@import '../variables/variable';
+
+/*=========================================================
+                   Menu css Start
+=========================================================*/
+.menu {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+
+    img{
+        width: 100%;
+        max-width: 100%;
+        border-radius: 15%;
+    }
+
+    &:hover {
+        .hidden_menu {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .hidden_menu {
+        position: relative;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: -30px;
+        right: -30px;
+        width: 400px;
+        height: 400px;
+        line-height: 50px;
+        text-align: center;
+        background: $c1;
+        border-radius: 0 0 0 360px;
+        transition: all linear .3s;
+
+        li {
+            position: absolute;
+
+            &:first-child {
+                top: 40px;
+                right: 305px;
+            }
+
+            &:nth-child(2) {
+                top: 130px;
+                right: 280px;
+            }
+
+            &:nth-child(3) {
+                top: 220px;
+                right: 220px;
+            }
+
+            &:nth-child(4) {
+                top: 280px;
+                right: 135px;
+            }
+
+            &:nth-child(5) {
+                top: 315px;
+                right: 35px;
+            }
+
+            &:last-child {
+                top: 90px;
+                right: 60px;
+            }
+
+            a {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                @include fs(#fff, 12px, 400, $f1);
+                border-radius: 50%;
+                background: #000;
+            }
+        }
+
+        .user-img {
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+}
+
+/*=========================================================
+                   Menu css end
+=========================================================*/

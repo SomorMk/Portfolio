@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --animate-duration: 2s;
+
+    ::selection {
+        background: #f57114;
+        color: #fff;
+    }
+}
+
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol,
+p,
+span {
+    margin: 0;
+    padding: 0;
+}
+
+.com_section_head {
+    h2 {
+        span {
+            color: #fff !important;
+            font-size: 80px;
+            font-weight: 700;
+            font-family: 'Teko', sans-serif;
+            text-transform: uppercase;
+        }
+        color: #ffc6c6;
+        font-size: 45px;
+        font-weight: 600;
+        font-family: 'Teko',
+        sans-serif;
+        text-transform: lowercase;
+    }
+}
+
+/*=========================================================
+                    Common css end
+=========================================================*/

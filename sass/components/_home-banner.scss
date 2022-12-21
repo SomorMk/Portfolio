@@ -1,0 +1,162 @@
+@import '../mixins/mixins';
+@import '../variables/variable';
+
+/*=========================================================
+                   Home Banner css Start
+=========================================================*/
+#home_banner {
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+    }
+
+
+    
+
+    #banner_section {
+        display: block;
+
+        .home_banner_row {
+            padding-top: 200px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            .banner_left {
+                position: relative;
+                width: 100%;
+                height: 100%;
+
+                .main_image {
+                    position: absolute;
+                    top: -20px;
+                    left: 40%;
+                    transform: translate(-50%, -50%);
+                    width: 250px;
+                    height: 250px;
+                    // overflow: hidden;
+
+                    #main_banner_img {
+                        width: 250px;
+                        height: 250px;
+                        transition: all linear .3s;
+                        z-index: 9;
+                        position: relative;
+                        // margin-top: 45px;
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            top: 0;
+                            left: 0;
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 50%;
+                            background: yellow;
+                            z-index: 999999;
+                        }
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+
+                        li {
+                            a {
+                                width: 50px;
+                                height: 50px;
+                                line-height: 50px;
+                                text-align: center;
+                                background: #000;
+                                color: #fff;
+                                font-size: 15px;
+
+                                &:hover {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+
+                    p {
+                        @include fs(#fff, 15px, 500, cursive);
+                        text-align: center;
+                        text-transform: capitalize;
+
+                        a {
+                            color: $c1;
+                            text-decoration: underline;
+                            transition: all linear .3s;
+
+                            &:hover {
+                                color: #fff;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .banner_right {
+                text-align: right;
+
+                .banner_text {
+                    h1 {
+                        background: $c1;
+                        @include fs(linear-gradient(90deg, rgba(255, 198, 198, 1) 0%, rgba(228, 139, 219, 1) 35%, rgba(223, 178, 255, 1) 75%, rgba(227, 250, 255, 1) 100%), 50px, 700, $f1);
+                        text-transform: uppercase;
+                        margin-bottom: 10px;
+                    }
+
+                    h2 {
+                        @include fs($c1, 40px, 500, $f2);
+                        text-transform: uppercase;
+                        margin-bottom: 10px;
+                        text-align: right;
+                    }
+
+                    p {
+                        @include fs($c1, 18px, 400, $f3);
+                        text-transform: capitalize;
+                        margin-bottom: 20px;
+                    }
+
+                    a {
+                        @include fs(#000, 12px, 500, $f1);
+                        background: #fff;
+                        width: 130px;
+                        height: 50px;
+                        line-height: 45px;
+                        text-align: center;
+                        border: 2px solid #fff;
+                        border-radius: 40px;
+                        text-transform: uppercase;
+                        transition: all linear .3s;
+                        position: relative;
+
+                        &:hover {
+                            color: black;
+                            background: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/*=========================================================
+                   Home Banner css end
+=========================================================*/
